@@ -1,0 +1,10 @@
+name: trimleaguetable
+title: TrimLeagueTable
+account: nzcms-ct-data-explorer
+server: shinyapps.io
+appId: 191343
+bundleId: 877656
+url: https://nzcms-ct-data-explorer.shinyapps.io/trimleaguetable/
+when: 1498099978.30637
+asMultiple: FALSE
+asStatic: FALSE
