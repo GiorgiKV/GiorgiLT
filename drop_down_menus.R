@@ -50,7 +50,7 @@ main_select_ui <- function(id) {
 
 main_select_server <- function(input, output, session, dat){
   
-  
+  ns <- session$ns
   output$main_menu <- renderUI({
     
     pickerInput(ns("main_select"),
