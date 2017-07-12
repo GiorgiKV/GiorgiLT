@@ -49,19 +49,19 @@ shinyUI(
                         column(9, #align = "left",
                         
                           tabsetPanel(
-                          tabPanel("Target Population",
+                          #tabPanel("Target Population",
                         
                         
 #                        h5("Select/Hide Columns"),
-                                  table_ui("table_tar"),
+                                 # table_ui("table_tar"),
                                   
                         
                                  # render_text_ui("text_out"),
-                                  plot_tar_ui("plot_tar"),
-                                  br(),
-                                  br(),
-                                  br(),
-                                  br()), 
+                                 # plot_tar_ui("plot_tar"),
+                                 # br(),
+                                 # br(),
+                                 # br(),
+                                 # br()), 
                       
                       tabPanel("Total Population",
  #                       h5("Select/Hide Columns"),
