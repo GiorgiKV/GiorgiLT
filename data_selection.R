@@ -110,15 +110,7 @@ plot_data_select <- function(input, output, session, dat, main_char_str, plot_ou
         droplevels.data.frame(.)
     }
     
-    
-    
-    
-    
-    
-    
-   
-    
-    
+
   })
 
 }  

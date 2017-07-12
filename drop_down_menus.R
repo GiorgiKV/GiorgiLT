@@ -68,7 +68,7 @@ main_select_server <- function(input, output, session, dat){
 
 ## Heterogeneity switch ui and server --------------------------------------------------------
 
-#het_select_ui <- function(id){
+##het_select_ui <- function(id){
   
  # ns <- NS(id)
   #switchInput(ns("het_select"),

@@ -8,7 +8,7 @@ shinyServer(function (input,output){
   
   callModule(main_select_server, "main_menu", dat = main_dat)
   
-  #het_ind <- callModule(het_server, "het_select")
+  ##het_ind <- callModule(het_server, "het_select")
   uncer_ind <- callModule(uncer_server, "uncer_select")
   main_char_str <- callModule(main_char_str_server, "main_menu", dat = main_dat)
   plot_outcome <- callModule(plot_outcome_server, "p_outcome")
@@ -42,7 +42,7 @@ shinyServer(function (input,output){
   callModule(table_render, "table_tot", tot_league_table)
   
   #  callModule(plot_tot_server, id = "plot_tot", plot_dat = plot_tot_dat, plot_outcome = plot_outcome, plot_height = plot_height, theme_league = theme_league)
-  #  callModule(plot_scatter_server, id = "plot_cep", dat = tab_tar_dat)
+     #callModule(plot_scatter_server, id = "plot_cep", dat = tab_tot_dat)
   
 })
 

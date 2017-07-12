@@ -18,7 +18,7 @@ plot_tot_ui <- function(id){
 plot_cep_ui <- function(id){
   
   ns <- NS(id)
-  plotOutput(ns("plot_cep"), height = 400, width = 800)
+  plotOutput(ns("plot_cep"), height = 300, width = 800)
 }
 
 
@@ -267,46 +267,43 @@ plot_scatter_server <- function(input, output, session, plot_dat){
   
   output$plot_cep <- renderPlot({
     
-    #    y_axis <- list(
-    #      zeroline = TRUE,
-    #      showline = TRUE,
-    #      rangemode = "tozero",
-    #      overlaying = "y",
-    #      side = "right"
-    #      #mirror = "ticks",
-    #      #gridcolor = toRGB("gray50"),
-    #      #gridwidth = 2,
-    #      #zerolinecolor = toRGB("red"),
-    #      #zerolinewidth = 4,
-    #      #linecolor = toRGB("black"),
-    #      #linewidth = 6
-    #    )
-    #    
-    #    x_axis <- list(
-    #      showline = TRUE
-    #    )
-    #    
-    #    plot_ly(data = plot_dat(), x = ~qalys, y = ~hs_costs) %>%
-    #      layout(#xaxis = y_axis,
-    #             yaxis2 = y_axis
-    #  #      yaxis = y_axis)
-    #      )
-    
-    
-    ggplot(plot_dat(), aes(x = qalys, y = hs_costs, colour = domain_a))+
-      # theme_set(theme_gray())+
-      geom_point(aes(shape = intervention_main))+
-      geom_vline(xintercept = 0, alpha = 0.5, size = 0.3)+ 
-      geom_hline(yintercept = 0, alpha = 0.5, size = 0.3)+
-      #     scale_x_continuous(alpha = 0.1)+
-      background_grid(major = "xy", minor = "none")+  
-      theme_league()+ 
-      theme(legend.position = "none")#+
-    #facet_grid(~domain_a)
-    
+      #y_axis <- list(
+         #zeroline = TRUE,
+         # showline = TRUE,
+          #rangemode = "tozero",
+         #overlaying = "y",
+         #side = "right",
+        #mirror = "ticks",
+          #gridcolor = toRGB("gray50"),
+          #gridwidth = 2,
+          #zerolinecolor = toRGB("red"),
+          #zerolinewidth = 4,
+          #linecolor = toRGB("black"),
+          #linewidth = 6
+       # )
+        
+        #x_axis <- list(
+         # showline = TRUE
+        #)
+        
+        plot_ly(data = plot_dat(), x = ~qalys, y = ~hs_costs,text = ~paste(intervention_main), color = ~domain_a) 
+          
   })
   
 }
+    
+    #ggplot(plot_dat(), aes(x = qalys, y = hs_costs, colour = domain_a))+
+      # theme_set(theme_gray())+
+      #geom_point(aes(shape = intervention_main))+
+      #geom_vline(xintercept = 0, alpha = 0.5, size = 0.3)+ 
+      #geom_hline(yintercept = 0, alpha = 0.5, size = 0.3)+
+      #     scale_x_continuous(alpha = 0.1)+
+      #background_grid(major = "xy", minor = "none")+  
+      #theme_league()+ 
+      #theme(legend.position = "none")#+
+    #facet_grid(~domain_a)
+    
+  
 
 
 # hover mouse to show intervention_short, qalys and costs. Min information. 
