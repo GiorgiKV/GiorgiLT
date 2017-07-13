@@ -18,7 +18,7 @@ plot_tot_ui <- function(id){
 plot_cep_ui <- function(id){
   
   ns <- NS(id)
-  plotOutput(ns("plot_cep"), height = 300, width = 800)
+  plotlyOutput(ns("plot_cep"), height = 300, width = 800)
 }
 
 
@@ -265,7 +265,7 @@ plot_tot_render <- function(input, output, session, plot_height,dat){
 
 plot_scatter_server <- function(input, output, session, plot_dat){
   
-  output$plot_cep <- renderPlot({
+  output$plot_cep <- renderPlotly({
     
       #y_axis <- list(
          #zeroline = TRUE,
@@ -286,7 +286,10 @@ plot_scatter_server <- function(input, output, session, plot_dat){
          # showline = TRUE
         #)
         
-        plot_ly(data = plot_dat(), x = ~qalys, y = ~hs_costs,text = ~paste(intervention_main), color = ~domain_a) 
+        plot_ly(data = plot_dat(), x = ~qalys, y = ~hs_costs,text = ~paste(intervention_main), color = ~domain_a) #%>%
+          #layout(xaxis = y_axis,
+                # yaxis2 = y_axis
+            #)
           
   })
   
