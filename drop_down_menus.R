@@ -56,8 +56,8 @@ main_select_server <- function(input, output, session, dat){
     pickerInput(ns("main_select"),
                 label = "Select Main Intervention",
                 choices = c(levels(dat()$intervention_main)),
-                selected = c("Salt substitution intervention where 25% of the sodium in processed foods was replaced by potassium and magnesium salts ",                            
-                             "Salt substitution intervention where most (59%) of the sodium in processed foods was replaced by potassium and magnesium salts "),#"All",
+                selected = c("Salt substitution intervention where 25% of the sodium in processed foods was replaced by potassium and magnesium salts",                            
+                             "Salt substitution intervention where most (59%) of the sodium in processed foods was replaced by potassium and magnesium salts"),#"All",
                 options = list(`actions-box` = TRUE,
                                `selected-text-format` = "count > 1"),
                 multiple = TRUE
